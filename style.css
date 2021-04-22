@@ -1,0 +1,399 @@
+/* Global */
+
+:root {
+    --color-gray: #363f5f;
+    --color-green: #3dd705;
+    --color-black: #161616;
+    --background: #f2f7ff;
+    --header-background: #2b4223;
+
+}
+
+* {
+    padding: 0em;
+    margin: 0em;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75%;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+
+/* h2 global */
+
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-gray);
+    font-weight: normal;
+}
+
+/* Header */
+
+header {
+    background-color: var(--header-background);
+    width: auto;
+    height: 200px;
+
+}
+
+#logo {
+    padding-top: 0.5rem;
+    font-weight: 200;
+    opacity: 1;
+    text-align: center;
+}
+
+#logo img {
+    height: 3rem;
+    width: 15rem;
+}
+
+#logo img:hover {
+    opacity: 0.5;
+    transition: 0.1s;
+}
+
+/* Balance */
+
+#balance {
+    margin-top: -8rem;
+}
+
+
+#balance h2 {
+    margin-top:0;
+    color: white;
+}
+
+/* Links and Buttons */
+
+a {
+    color: #3dd705;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #44ff00;
+    transition: 0.2s;
+}
+
+.button.new {
+    margin-top: 1rem;
+    display: inline-block;
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    background-color: var(--color-green);
+
+    cursor: pointer; 
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+button:hover {
+    transition: 0.2s;
+    background-color: #44ff00;
+}
+
+.button.cancel {
+    color: #e92929;
+    border: 2px solid #e92929;
+    border-radius: 0.25rem; 
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.button.cancel:hover {
+    opacity: 1;
+}
+
+/* Cards */
+
+.card {
+
+    background-color: var(--background);
+
+    padding: 1.5rem 2rem;
+
+    border-radius: 0.5rem;
+
+    box-shadow: 0 0 0.9rem var(--color-gray);
+
+    margin-bottom: 2rem;
+
+    color: var(--color-gray);
+
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card h3 img:hover {
+    opacity: 0.6;
+    transition: 0.1s;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+
+    margin-top: 1rem;
+}
+
+.card.total {
+    background-color: #49aa26;
+    color: white;
+}
+
+.card.total h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
+/* Tables */
+
+#transation {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+
+#data_table {
+    width: 100%;
+    border-spacing: 0rem 0.5rem;
+    border-radius: 1em;
+}
+
+table td {
+    text-align: left;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+
+    font-weight: normal;
+    padding: 1rem 2rem;
+
+    opacity: 0.7;
+}
+
+table td:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+
+table th {
+
+    text-align: left;
+    font-weight: normal;
+    padding: 1rem 2rem;
+
+    background-color: rgb(255, 255, 255);
+    opacity: 0.7;
+}
+
+table th:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+
+table thead tr th:first-child, table tbody tr td:first-child {
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child, table tbody tr td:last-child {
+    border-radius: 00 0.25rem 0.25rem 0;
+}
+
+td.description {
+    color: var(--color-gray);
+}
+
+td.income {
+    color: #12a454;
+}
+
+td.outcome {
+    color: #e92929;
+}
+
+/* Modal */
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+}
+
+.modal-overlay {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: #F0f2f5;
+    padding: 2.4rem;
+
+    position: relative;
+}
+
+/* Form */
+
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    margin-top: 0;
+}
+
+#form form input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 1rem;
+
+    width: 100%;
+}
+
+.input-group {
+    margin-top: 1rem;
+}
+
+.input-group small{
+    opacity: 0.5;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button, .input-group.actions button {
+    width: 48%;
+}
+
+/* Footer */
+
+footer{
+    padding: 4rem 0 1rem 0;
+    opacity: 0.6;
+
+    position: relative;
+    text-align: center;
+    z-index: 0;
+}
+
+
+footer:hover {
+    opacity: 1;
+    transition: 0.1s;
+}
+
+/* Responsive */
+
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1em;
+    }
+
+    .card-income:hover {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        transition: 0.3s;
+    }
+
+    .card-outcome {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: -1.5rem;
+    }
+    
+    .card-outcome:hover {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        transition: 0.3s;
+    }
+
+
+    .total {
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+        margin-left: -1.5rem;
+    }
+
+    .total:hover {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        transition: 0.3s;
+    }
+}
