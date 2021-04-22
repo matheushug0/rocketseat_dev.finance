@@ -9,6 +9,5 @@
     -Total (Entradas - Saídas)
 
 ## Exemplo
-```html
+
 <img src="./assets/app.jpg" alt="Aplicação WEB" title="Página WEB - Dev.Finance"></img>
-```
